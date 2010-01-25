@@ -5,4 +5,3 @@
 	<p><button type="button" onclick="$('search').submit()"><span><?php __('Search', true) ?></span></button></p>
 <?php echo $form->submit(); echo $form->end(); ?>
 </div>
-<?php echo $this->element('mi_panel/filter') ?>

@@ -6,5 +6,6 @@
 		echo '</div>';
 	}
 	echo $this->element('mi_panel/search');
+	echo $this->element('mi_panel/filter');
 ?>
 </div>
