@@ -10,7 +10,6 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @filesource
  * @copyright     Copyright (c) 2009, Javi Arques
  * @link          www.tbd.com
  * @package       mi_panel
