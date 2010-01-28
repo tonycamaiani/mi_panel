@@ -4,7 +4,7 @@ if (empty($filters)) {
 }
 ?>
 <div id="searchFilter">
-	<h2><span>Filtrar</span></h2>
+	<h2><span><?php echo __d('mi_panel', 'Filter') ?></span></h2>
 <?php
 if (empty($filterMode)) {
 	$filterMode = 'simple';
