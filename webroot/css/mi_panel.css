@@ -1,0 +1,795 @@
+/**
+ * Generic syles for a (n administration) panel
+ *
+ * Modified by Javi Arques and Tony Camaiani
+ *
+ * Copyright (c) 2009, JP De La Torre
+ *
+ * Licensed under The MIT License
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @filesource
+ * @copyright     Copyright (c) 2009, JP De La Torre
+ * @link          http://jpdelatorre.com
+ * @package       mi_panel
+ * @subpackage    mi_panel.vendors.css
+ * @since         v 1.0 (23-Nov-2009)
+ * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
+ */
+<?php
+/**
+ * Load the default dynamic css variables from the plugin, then load the applications
+ * override css
+ */
+include(dirname(dirname(dirname(__FILE__))) . DS . 'config' . DS . 'mi_panel.php');
+Configure::load('mi_panel');
+App::import('Vendor', 'Mi.MiCache');
+$css = Set::merge($config['MiPanel']['css'], (array)MiCache::setting('MiPanel.css'));
+?>
+*{
+	#vertical-align: baseline;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+/* remember to define focus styles! */:focus{outline:0;}
+ol,ul{
+	list-style:none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table{
+	border-collapse:separate;
+	border-spacing:0;
+	width: 99%;
+}
+caption,th,td{
+	text-align:left;
+	font-weight:normal;
+}
+blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}
+h1,h2,h3,h4,h5,h6 {
+	font-weight:normal;
+	font-family:"lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+}
+h1{
+	font-size: 200%;
+	text-shadow:<?php echo $css['h1']['text-shadow'] ?>;
+}
+h2{
+	font-size: 180%;
+	color:<?php echo $css['h2']['color'] ?>;
+	text-shadow:<?php echo $css['h2']['text-shadow'] ?>;
+}
+h3{
+	font-size: 160%;
+	text-shadow:<?php echo $css['h3']['text-shadow'] ?>;
+}
+h4{
+	font-size: 140%;
+}
+h5{
+	font-size: 120%;
+}
+h6{
+	font-size: 100%;
+}
+body {
+	font-size:62.5%;
+	font-family: Arial, Helvetica, sans-serif;
+	background:<?php echo $css['body']['background'] ?>;
+	color:<?php echo $css['body']['color'] ?>;
+	outline: none;
+	min-width: 800px;
+}
+#header #logo{
+	background:<?php echo $css['header-logo']['background'] ?>;
+	border-right:1px solid <?php echo $css['header-logo']['background'] ?>;
+	float:left;
+	height:31px;
+	left:5px;
+	padding-right:19px;
+	position:absolute;
+	top:15px;
+	width:120px;
+	z-index:1;
+}
+
+#page-wrap {
+	width:95%;
+	margin:20px auto;
+	background:<?php echo $css['page-wrap']['background'] ?>;
+	-moz-border-radius: 6px;
+	padding: 10px;
+	display: block;
+	overflow: hidden;
+}
+
+#header {
+	height:95px;
+	position:relative;
+}
+#header #headerContent{
+	height:95px;
+	position:relative;
+}
+#header h1 {
+	font-size:3em;
+	position:absolute;
+	left:0;
+	top:10px;
+}
+#header h1 a {
+	color:<?php echo $css['header-h1-a']['color'] ?>;
+	text-decoration:none;
+}
+#header h2 {
+	color:<?php echo $css['header-h2']['color'] ?>;
+	font-size:1.6em;
+	left:200px;
+	position:absolute;
+	text-transform:uppercase;
+	top:20px;
+}
+a#logo {
+	color:<?php echo $css['header-h2']['color'] ?>;
+	font-size:22px;
+	top:20px;
+	padding-left: 35px;
+	text-decoration: none;
+	text-shadow:<?php echo $css['h2']['text-shadow'] ?>;
+}
+
+#header p {
+	position:absolute;
+	right:10px;
+	top:45px;
+	font-size:1.4em;
+}
+#header p a {
+	color:<?php echo $css['header-p-a']['color'] ?>;
+}
+
+#main-nav {
+	width:100%;
+	height:30px;
+	background:<?php echo $css['main-nav']['background'] ?>;
+	position:absolute;
+	bottom:0;
+	left:0;
+	-moz-border-radius: 6px;
+	font-family:"lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+}
+#main-nav li {
+	width:auto;
+	height:30px;
+	line-height:28px;
+	float:left;
+	font-size:1.4em;
+	padding:0 10px;
+}
+#main-nav li a {
+	color:<?php echo $css['main-nav-li-a']['color'] ?>;
+	text-decoration:none;
+}
+#main-nav li.active {
+	height:43px;
+	background:<?php echo $css['main-nav-li-active']['background'] ?>;
+	position:relative;
+	z-index: 2;
+}
+
+#content {
+	padding-bottom:20px;
+	margin-top:9px;
+	display: block;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+#main {
+	width:79%;
+	float:left;
+}
+#main h1 {
+	width:96%;
+	margin:0 auto;
+	background:<?php echo $css['main-h1']['background'] ?>;
+	font-size:2.8em;
+	padding:5px 0;
+	text-indent:5px;
+	position:relative;
+}
+#main h1 span {
+	font-size:14px;
+	position:absolute;
+	top:10px;
+	right:15px;
+	color:<?php echo $css['main-h1-span']['color'] ?>;
+}
+#main .container:first-child {
+	margin-top: 0;
+}
+
+#sidebar {
+	-moz-border-radius:6px;
+	background:<?php echo $css['sidebar']['background'] ?>;
+	float:right;
+	padding:10px;
+	position:relative;
+	width:18%;
+}
+#sidebar h2 {
+	background:<?php echo $css['sidebar-h2']['background'] ?>;
+	font-size:1.4em;
+	-moz-border-radius: 6px;
+	display: block;
+	overflow: hidden;
+	clear: both;
+	padding: 0 0 14px 0;
+	text-shadow: none;
+	position: relative;
+	z-index: 2;
+}
+#sidebar h2 span{
+	display: block;
+	overflow: hidden;
+	background:<?php echo $css['sidebar-h2-span']['background'] ?>;
+	color:<?php echo $css['sidebar-h2-span']['color'] ?>;
+	-moz-border-radius: 6px;
+	padding: 3px 7px;
+
+}
+#sidebar ul {
+	font-size:13px;
+	margin-bottom:10px;
+}
+#sidebar li {
+	font-size:14px;
+	padding:5px 0;
+}
+#sidebar li a {
+	color:<?php echo $css['sidebar-li-a']['color'] ?>;
+	text-decoration:none;
+}
+#sidebar li a:hover {
+	color:<?php echo $css['sidebar-li-a-hover']['color'] ?>;
+	text-decoration:underline;
+}
+#sidebar li.active a {
+	border-bottom:1px dotted <?php echo $css['sidebar-li-active-a']['border-color'] ?>;
+	color:<?php echo $css['sidebar-li-active-a']['color'] ?>;
+}
+#sidebar button {
+	background:none;
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+.container {
+	display: block;
+	overflow-x:auto;
+	overflow-y:hidden;
+	background:<?php echo $css['container']['background'] ?>;
+	border:10px solid <?php echo $css['container']['border-color'] ?>;
+	-moz-border-radius: 6px;
+	margin: 10px 0;
+}
+.container h2 {
+	font-size:2.4em;
+	position:relative;
+	margin-bottom:10px;
+}
+.container h2 span {
+	font-size:14px;
+	position:absolute;
+	right:0;
+	color:<?php echo $css['container-h2-span']['color'] ?>;
+}
+.container h2 span a {
+	color:<?php echo $css['container-h2-span-a']['color'] ?>;
+}
+.container table thead th, .container table tbody th {
+	background:<?php echo $css['container-table-thead-th']['background'] ?>;
+	font-size:1.2em;
+	color:<?php echo $css['container-table-thead-th']['color'] ?>;
+	padding:5px;
+	font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+}
+.container table tbody td { font-size:1.2em; padding:5px;}
+
+.form-container { width:96%; margin:0 auto; margin-top:15px;}
+.form-container fieldset { clear:both; margin-bottom:8px;}
+.form-container fieldset .input { float:left; margin:3px;}
+.form-container fieldset .input label { display:block; font-size:1.2em;}
+.form-container fieldset .box label { font-size:1.2em;}
+.form-container fieldset .box label.box-heading { margin-right:25px;}
+.form-container fieldset .button { margin-top:15px;}
+.form-container fieldset .button button {
+	background:none;
+	border:none;
+	padding:0;
+	margin:0;
+}
+form div{
+	display: block;
+	margin: 10px 0;
+}
+.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.clearfix { display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* End hide from IE-mac */
+
+.message {
+	background:<?php echo $css['message']['background'] ?>;
+	font-size:14px;
+	margin-bottom:10px;
+	margin-top:0;
+	padding:15px;
+	position:relative;
+	text-align:center;
+}
+.flashWarn {
+	background-color:<?php echo $css['flashWarn']['background-color'] ?>;
+	border:1px solid <?php echo $css['flashWarn']['border-color'] ?>;
+}
+.flashError, #authMessage {
+	background-color:<?php echo $css['flashError']['background-color'] ?>;
+	border:1px solid <?php echo $css['flashError']['border-color'] ?>;
+	color:<?php echo $css['flashError']['color'] ?>;
+}
+body table.cake-sql-log {
+	color: white;
+}
+tr.even {
+	background:<?php echo $css['tr-even']['background'] ?>;
+}
+tr.odd, tr.even {
+	cursor: pointer;
+}
+tr.odd:hover, tr.even:hover {
+	background:<?php echo $css['tr-hover']['background'] ?>;
+	color:<?php echo $css['tr-hover']['color'] ?>;
+}
+a{
+	outline: none;
+	border: none;
+	color:<?php echo $css['a']['color'] ?>;
+	text-decoration: underline;
+}
+a:hover{
+	text-decoration: none;
+}
+div.input div.img {
+	width: 100%;
+	height: 150px;
+	text-align: center;
+}
+div.textarea, textarea {
+	width: 100%;
+}
+div.container {
+	text-align: justify;
+}
+div.container div.img {
+	clear: right;
+	float: right;
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+div.container p {
+	margin-bottom: 2em;
+}
+ul.tree-options {
+	margin: 0;
+	padding-left: none;
+	display: inline;
+}
+ul.tree-options li {
+	margin-right: 10px;
+	display: inline;
+}
+ul.tree-options a {
+	color:<?php echo $css['a']['color'] ?>;
+	text-decoration: none;
+}
+.formNotice {
+	font-style:italic;
+}
+th a {
+	color:<?php echo $css['th-a']['color'] ?>;
+}
+.flag {
+	float:right;
+}
+.float {
+	float:left;
+	width: 23%;
+	margin-right: 1em;
+}
+.float select {
+	width:100%;
+	overflow:auto;
+}
+fieldset.normal { width:600px;}
+fieldset.normal label { width:250px; text-align:right; float:left; clear: left; font-size:1.5em; margin-right: 10px;}
+div#navigation {
+	width: auto;
+	text-align: center;
+	margin: 1em 0;
+	padding: 1em;
+	background:<?php echo $css['div-navigation']['background'] ?>;
+	font-size: 1.5em;
+}
+div#navigation .current {
+}
+div.error {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+	background:<?php echo $css['div-error']['background'] ?>;
+}
+div.error label {
+	font-weight: bold;
+}
+a.leavePopup {
+	margin:-10px 0 0;
+	padding:1px;
+	position:absolute;
+	right:26px;
+	top:50%;
+	width:19px;
+}
+span.ui-dialog-title {
+	padding-right: 50px;
+}
+#paging{
+	text-align: center;
+	display: block;
+	overflow: hidden;
+	margin: 15px 0;
+	font-size: 14px;
+}
+#paging span{
+	padding: 5px;
+}
+.boton, button, input[type="submit"] {
+	-moz-border-radius:12px;
+	background:<?php echo $css['button']['background'] ?>;
+	color:<?php echo $css['button']['color'] ?>;
+	border: 1px solid <?php echo $css['button']['border-color'] ?>;
+	font-size:14px;
+	padding: 0 8px;
+	text-shadow:<?php echo $css['button']['text-shadow'] ?>;
+	vertical-align:middle;
+	cursor: pointer;
+	font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+
+}
+button:hover, input[type="submit"]:hover, .boton:hover {
+	color:<?php echo $css['button-hover']['color'] ?>;
+	text-decoration:none;
+	border-color:<?php echo $css['button-hover']['color'] ?>;
+}
+textarea, input[type="text"], input[type="password"], select {
+	background:<?php echo $css['textarea-input']['background'] ?>;
+	border:1px solid <?php echo $css['textarea-input']['border-color'] ?>;
+	padding: 2px;
+	font-size: 14px;
+}
+textarea:hover, input[type="text"]:hover, input[type="password"]:hover, select:hover,
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, select:focus,
+textarea:active, input[type="text"]:active, input[type="password"]:active, select:active{
+	border-color:<?php echo $css['textarea-input']['border-color'] ?>;
+}
+#search div.input{
+	margin: 0;
+}
+#search div.input input{
+	height:17px;
+	padding:7px;
+	width:200px;
+}
+#hoverMenu{
+	position: absolute;
+	bottom: 7px;
+	right: 0;
+	z-index: 2;
+}
+#searchFilter label {
+	width: 59%;
+	float: left;
+}
+#searchFilter div.filter select {
+	width: 40%;
+}
+#searchFilter select, #searchFilter input {
+	width: 100%;
+}
+#searchFilter h2 {
+	cursor: pointer;
+}
+#navcontainer{
+	display: block;
+	overflow: hidden;
+}
+body pre {
+	background:<?php echo $css['body-pre']['background'] ?>;
+	border:5px solid <?php echo $css['body-pre']['border-color'] ?>;
+	clear:both;
+	color:<?php echo $css['body-pre']['color'] ?>;
+	display:block;
+	font-family:georgia;
+	font-size:16px;
+	line-height:140%;
+	padding:10px;
+	text-align: left;
+}
+div.floatWrapper {
+	width: 100%;
+}
+div.floatWrapper div {
+	display:block;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+div.halfWidthLeft {
+	float:left;
+	margin-right: 10px;
+	width: 50%;
+}
+ul li ul {
+	padding-left: 40px;
+}
+.hidden {
+	display:none;
+}
+fieldset div.wide {
+	clear: left;
+	width: 100%;
+}
+
+fieldset div.half {
+	padding-right:12px;
+	width:47%;
+	float: left;
+}
+
+fieldset div.athird {
+	padding-right:12px;
+	width:30%;
+}
+
+fieldset div label,
+fieldset div.athird label,
+fieldset div.half label,
+fieldset div.wide label {
+	font-weight: bold;
+}
+
+fieldset div.athird input,
+fieldset div.half input,
+fieldset div.wide input {
+	width: 100%;
+}
+
+fieldset div.athird.date input,
+fieldset div.half.date input,
+fieldset div.wide.date input {
+	width: 90%;
+}
+
+input.narrow {
+	width: 3em;
+}
+
+fieldset div.file img {
+	float: left;
+	margin-right: 10px;
+}
+
+/* added by tony */
+
+.ui-datepicker-trigger {
+	vertical-align:text-bottom;
+	margin: 0 0 0 2px;
+}
+
+
+/* panel view classes */
+
+.container div.odd, .container div.even {
+	width: 99.9%;
+	display: block;
+	overflow: hidden;
+}
+
+.container div div {
+	float: left;
+	font-size: 12px;
+}
+
+.container div div.submit {
+	float: none;
+	clear: left;
+	margin: 10px 20px;
+}
+
+.container h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: none;
+	border-left: 22px solid <?php echo $css['container-odd']['background'] ?>;
+	padding: 0 5px;
+	margin: 3px 0 3px 1px;
+	color:<?php echo $css['container-h3']['color'] ?>;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	clear: left;
+	display: block;
+	overflow: hidden;
+
+}
+
+.container h3.title {
+	font-size: 18px;
+
+}
+
+.container .odd {
+	background:<?php echo $css['container-odd']['background'] ?>;
+	border-left: 1px solid <?php echo $css['container-even']['background'] ?>;
+}
+
+.container .even {
+	background:<?php echo $css['container-even']['background'] ?>;
+	/* border-right: 1px solid #ECF0F8;*/
+}
+
+.field {
+	width: 99.9%;
+}
+
+.field.half {
+	width: 49.8%;
+}
+
+.field.athird {
+	width: 33.2%;
+}
+
+div.field:last-child {
+	float:right;
+}
+
+.container .name {
+	padding: 5px 10px;
+	font-weight: bold;
+	color:<?php echo $css['container-name']['color'] ?>;
+}
+
+.container .value {
+	padding: 5px;
+}
+
+.container .image {
+	float: left;
+	padding: 5px;
+	background:<?php echo $css['container-image']['background'] ?>;
+}
+.container .image img {
+	border: 1px solid <?php echo $css['container-image']['background'] ?>;
+	margin: 0 5px;
+}
+
+.container .value p {
+	margin-bottom: 0;
+}
+
+.container .large .name {
+	width: 6%;
+}
+
+.container .large .value {
+	width: 90%;
+}
+
+.container .center .name{
+	text-align: center;
+	float: none;
+}
+
+.container .half.large .name {
+	width: 12%;
+}
+
+.container .half.large .value {
+	width: 81%;
+}
+
+.container .left {
+	width: 78%;
+}
+
+div.radio fieldset legend {
+	font-size: 1.1em!important;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+div.radio fieldset input {
+	width: auto;
+	display: inline;
+	float: left;
+}
+
+div.radio fieldset label {
+	width: auto;
+	display: inline;
+	height: 2em;
+	float: left;
+	margin-right: 5px;
+}
+
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.center {
+	text-align:center;
+	margin:auto;
+}
+
+/* override ui theme */
+#ui-datepicker-div {
+	z-index: 1000000;
+}
+
+.ui-tabs {
+	display:block;
+	overflow:hidden;
+}
+
+.ui-tabs .form-container{
+	margin-top: 0;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+	font-size:1.2em;
+}
+<?php echo $css['overrides'] ?>

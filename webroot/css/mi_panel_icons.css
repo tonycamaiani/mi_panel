@@ -1,0 +1,194 @@
+/*
+ * Based upon the css used by the jQuery UI CSS framework
+ *
+ * jQuery UI CSS Framework
+ * Copyright (c) 2009 AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT (MIT-LICENSE.txt) and GPL (GPL-LICENSE.txt) licenses.
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/
+ */
+
+.mini-icon{
+	background-image:url(img/small-icons.png);
+	background-repeat:no-repeat;
+	display:block;
+	float:left;
+	height:15px;
+	margin:0 5px 0 0;
+	padding-left:0;
+	text-indent:24px;
+	width:19px;
+} 
+/* positioning */
+.mini-carat-1-n { background-position: 0 0; }
+.mini-carat-1-ne { background-position: -16px 0; }
+.mini-carat-1-e { background-position: -32px 0; }
+.mini-carat-1-se { background-position: -48px 0; }
+.mini-carat-1-s { background-position: -64px 0; }
+.mini-carat-1-sw { background-position: -80px 0; }
+.mini-carat-1-w { background-position: -96px 0; }
+.mini-carat-1-nw { background-position: -112px 0; }
+.mini-carat-2-n-s { background-position: -128px 0; }
+.mini-carat-2-e-w { background-position: -144px 0; }
+.mini-triangle-1-n { background-position: 0 -16px; }
+.mini-triangle-1-ne { background-position: -16px -16px; }
+.mini-triangle-1-e { background-position: -32px -16px; }
+.mini-triangle-1-se { background-position: -48px -16px; }
+.mini-triangle-1-s { background-position: -64px -16px; }
+.mini-triangle-1-sw { background-position: -80px -16px; }
+.mini-triangle-1-w { background-position: -96px -16px; }
+.mini-triangle-1-nw { background-position: -112px -16px; }
+.mini-triangle-2-n-s { background-position: -128px -16px; }
+.mini-triangle-2-e-w { background-position: -144px -16px; }
+.mini-arrow-1-n { background-position: 0 -32px; }
+.mini-arrow-1-ne { background-position: -16px -32px; }
+.mini-arrow-1-e { background-position: -32px -32px; }
+.mini-arrow-1-se { background-position: -48px -32px; }
+.mini-arrow-1-s { background-position: -64px -32px; }
+.mini-arrow-1-sw { background-position: -80px -32px; }
+.mini-arrow-1-w { background-position: -96px -32px; }
+.mini-arrow-1-nw { background-position: -112px -32px; }
+.mini-arrow-2-n-s { background-position: -128px -32px; }
+.mini-arrow-2-ne-sw { background-position: -144px -32px; }
+.mini-arrow-2-e-w { background-position: -160px -32px; }
+.mini-arrow-2-se-nw { background-position: -176px -32px; }
+.mini-arrowstop-1-n { background-position: -192px -32px; }
+.mini-arrowstop-1-e { background-position: -208px -32px; }
+.mini-arrowstop-1-s { background-position: -224px -32px; }
+.mini-arrowstop-1-w { background-position: -240px -32px; }
+.mini-arrowthick-1-n { background-position: 0 -48px; }
+.mini-arrowthick-1-ne { background-position: -16px -48px; }
+.mini-arrowthick-1-e { background-position: -32px -48px; }
+.mini-arrowthick-1-se { background-position: -48px -48px; }
+.mini-arrowthick-1-s { background-position: -64px -48px; }
+.mini-arrowthick-1-sw { background-position: -80px -48px; }
+.mini-arrowthick-1-w { background-position: -96px -48px; }
+.mini-arrowthick-1-nw { background-position: -112px -48px; }
+.mini-arrowthick-2-n-s { background-position: -128px -48px; }
+.mini-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.mini-arrowthick-2-e-w { background-position: -160px -48px; }
+.mini-arrowthick-2-se-nw { background-position: -176px -48px; }
+.mini-arrowthickstop-1-n { background-position: -192px -48px; }
+.mini-arrowthickstop-1-e { background-position: -208px -48px; }
+.mini-arrowthickstop-1-s { background-position: -224px -48px; }
+.mini-arrowthickstop-1-w { background-position: -240px -48px; }
+.mini-arrowreturnthick-1-w { background-position: 0 -64px; }
+.mini-arrowreturnthick-1-n { background-position: -16px -64px; }
+.mini-arrowreturnthick-1-e { background-position: -32px -64px; }
+.mini-arrowreturnthick-1-s { background-position: -48px -64px; }
+.mini-arrowreturn-1-w { background-position: -64px -64px; }
+.mini-arrowreturn-1-n { background-position: -80px -64px; }
+.mini-arrowreturn-1-e { background-position: -96px -64px; }
+.mini-arrowreturn-1-s { background-position: -112px -64px; }
+.mini-arrowrefresh-1-w { background-position: -128px -64px; }
+.mini-arrowrefresh-1-n { background-position: -144px -64px; }
+.mini-arrowrefresh-1-e { background-position: -160px -64px; }
+.mini-arrowrefresh-1-s { background-position: -176px -64px; }
+.mini-arrow-4 { background-position: 0 -80px; }
+.mini-arrow-4-diag { background-position: -16px -80px; }
+.mini-extlink { background-position: -32px -80px; }
+.mini-newwin { background-position: -48px -80px; }
+.mini-refresh { background-position: -64px -80px; }
+.mini-shuffle { background-position: -80px -80px; }
+.mini-transfer-e-w { background-position: -96px -80px; }
+.mini-transferthick-e-w { background-position: -112px -80px; }
+.mini-folder-collapsed { background-position: 0 -96px; }
+.mini-folder-open { background-position: -16px -96px; }
+.mini-document { background-position: -32px -96px; }
+.mini-document-b { background-position: -48px -96px; }
+.mini-note { background-position: -64px -96px; }
+.mini-mail-closed { background-position: -80px -96px; }
+.mini-mail-open { background-position: -96px -96px; }
+.mini-suitcase { background-position: -112px -96px; }
+.mini-comment { background-position: -128px -96px; }
+.mini-person { background-position: -144px -96px; }
+.mini-print { background-position: -160px -96px; }
+.mini-trash { background-position: -176px -96px; }
+.mini-locked { background-position: -192px -96px; }
+.mini-unlocked { background-position: -208px -96px; }
+.mini-bookmark { background-position: -224px -96px; }
+.mini-tag { background-position: -240px -96px; }
+.mini-home { background-position: 0 -112px; }
+.mini-flag { background-position: -16px -112px; }
+.mini-calendar { background-position: -32px -112px; }
+.mini-cart { background-position: -48px -112px; }
+.mini-pencil { background-position: -64px -112px; }
+.mini-clock { background-position: -80px -112px; }
+.mini-disk { background-position: -96px -112px; }
+.mini-calculator { background-position: -112px -112px; }
+.mini-zoomin { background-position: -128px -112px; }
+.mini-zoomout { background-position: -144px -112px; }
+.mini-search { background-position: -160px -112px; }
+.mini-wrench { background-position: -176px -112px; }
+.mini-gear { background-position: -192px -112px; }
+.mini-heart { background-position: -208px -112px; }
+.mini-star { background-position: -224px -112px; }
+.mini-link { background-position: -240px -112px; }
+.mini-cancel { background-position: 0 -128px; }
+.mini-plus { background-position: -16px -128px; }
+.mini-plusthick { background-position: -32px -128px; }
+.mini-minus { background-position: -48px -128px; }
+.mini-minusthick { background-position: -64px -128px; }
+.mini-close { background-position: -80px -128px; }
+.mini-closethick { background-position: -96px -128px; }
+.mini-key { background-position: -112px -128px; }
+.mini-lightbulb { background-position: -128px -128px; }
+.mini-scissors { background-position: -144px -128px; }
+.mini-clipboard { background-position: -160px -128px; }
+.mini-copy { background-position: -176px -128px; }
+.mini-contact { background-position: -192px -128px; }
+.mini-image { background-position: -208px -128px; }
+.mini-video { background-position: -224px -128px; }
+.mini-script { background-position: -240px -128px; }
+.mini-alert { background-position: 0 -144px; }
+.mini-info { background-position: -16px -144px; }
+.mini-notice { background-position: -32px -144px; }
+.mini-help { background-position: -48px -144px; }
+.mini-check { background-position: -64px -144px; }
+.mini-bullet { background-position: -80px -144px; }
+.mini-radio-off { background-position: -96px -144px; }
+.mini-radio-on { background-position: -112px -144px; }
+.mini-pin-w { background-position: -128px -144px; }
+.mini-pin-s { background-position: -144px -144px; }
+.mini-play { background-position: 0 -160px; }
+.mini-pause { background-position: -16px -160px; }
+.mini-seek-next { background-position: -32px -160px; }
+.mini-seek-prev { background-position: -48px -160px; }
+.mini-seek-end { background-position: -64px -160px; }
+.mini-seek-first { background-position: -80px -160px; }
+.mini-stop { background-position: -96px -160px; }
+.mini-eject { background-position: -112px -160px; }
+.mini-volume-off { background-position: -128px -160px; }
+.mini-volume-on { background-position: -144px -160px; }
+.mini-power { background-position: 0 -176px; }
+.mini-signal-diag { background-position: -16px -176px; }
+.mini-signal { background-position: -32px -176px; }
+.mini-battery-0 { background-position: -48px -176px; }
+.mini-battery-1 { background-position: -64px -176px; }
+.mini-battery-2 { background-position: -80px -176px; }
+.mini-battery-3 { background-position: -96px -176px; }
+.mini-circle-plus { background-position: 0 -192px; }
+.mini-circle-minus { background-position: -16px -192px; }
+.mini-circle-close { background-position: -32px -192px; }
+.mini-circle-triangle-e { background-position: -48px -192px; }
+.mini-circle-triangle-s { background-position: -64px -192px; }
+.mini-circle-triangle-w { background-position: -80px -192px; }
+.mini-circle-triangle-n { background-position: -96px -192px; }
+.mini-circle-arrow-e { background-position: -112px -192px; }
+.mini-circle-arrow-s { background-position: -128px -192px; }
+.mini-circle-arrow-w { background-position: -144px -192px; }
+.mini-circle-arrow-n { background-position: -160px -192px; }
+.mini-circle-zoomin { background-position: -176px -192px; }
+.mini-circle-zoomout { background-position: -192px -192px; }
+.mini-circle-check { background-position: -208px -192px; }
+.mini-circlesmall-plus { background-position: 0 -208px; }
+.mini-circlesmall-minus { background-position: -16px -208px; }
+.mini-circlesmall-close { background-position: -32px -208px; }
+.mini-squaresmall-plus { background-position: -48px -208px; }
+.mini-squaresmall-minus { background-position: -64px -208px; }
+.mini-squaresmall-close { background-position: -80px -208px; }
+.mini-grip-dotted-vertical { background-position: 0 -224px; }
+.mini-grip-dotted-horizontal { background-position: -16px -224px; }
+.mini-grip-solid-vertical { background-position: -32px -224px; }
+.mini-grip-solid-horizontal { background-position: -48px -224px; }
+.mini-gripsmall-diagonal-se { background-position: -64px -224px; }
+.mini-grip-diagonal-se { background-position: -80px -224px; }
