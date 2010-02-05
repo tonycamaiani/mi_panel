@@ -28,6 +28,14 @@
 class MiPanelComponent extends Object {
 
 /**
+ * enabled property
+ *
+ * @var mixed null
+ * @access public
+ */
+	var $enabled = null;
+
+/**
  * initialize method
  *
  * @param mixed $Controller
