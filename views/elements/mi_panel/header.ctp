@@ -13,8 +13,10 @@
 		</div>
 	<?php
 		$menu->settings(__('main', true), array('activeMode' => 'controller', 'id' => 'main-nav'));
-		Configure::load('mi_panel');
-		$menus = Configure::read('MiPanel.menu.top');
+		if (empty($menus)) {
+			Configure::load('mi_panel');
+			$menus = Configure::read('MiPanel.menu.top');
+		}
 		$controller = Inflector::underscore($this->name);
 		if ($menus) {
 			$whichOne = key($menus);
