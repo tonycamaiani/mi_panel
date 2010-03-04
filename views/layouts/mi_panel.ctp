@@ -23,7 +23,7 @@
 			$asset->js(array(
 				'jquery', 'jquery-ui',
 				'jquery.blockUI',
-				'jquery.mi.cloner', 'jquery.mi.dialogs', 'jquery.mi.lookups',
+				'jquery.mi.cloner', 'jquery.mi.dialogs',
 				'/mi_panel/js/cookies',
 				'/mi_panel/js/mi_panel'
 			));
