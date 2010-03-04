@@ -31,7 +31,7 @@ foreach ($filters as $filter => $settings) {
 	if (strpos($filter, 'date') || strpos($filter, 'expires') || in_array($filter, array('created', 'modified', 'deleted'))) {
 		$inputOptions = am(array('type' => 'text', 'between' => $select), $settings);
 	} elseif (preg_match('@_id$@', $filter)) {
-		$inputOptions = am(array('between' => $select), $settings);
+		$inputOptions = am(array('options' => array('--autocomplete--' => true), 'between' => $select), $settings);
 	} else {
 		if ($filterMode === 'simple') {
 			$inputOptions = am(array('between' => $select), $settings);

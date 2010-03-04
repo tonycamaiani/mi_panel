@@ -570,6 +570,10 @@ div.halfWidthLeft {
 	margin-right: 10px;
 	width: 50%;
 }
+div.halfWidthRight {
+	margin-left: 50%;
+}
+
 ul li ul {
 	padding-left: 40px;
 }
