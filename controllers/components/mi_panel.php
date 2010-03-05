@@ -73,11 +73,7 @@ class MiPanelComponent extends Object {
 				if ($language = MiCache::setting('Site.lang')) {
 					Configure::write('Config.language', $language);
 				}
-				$plugin = (string)$this->Controller->plugin;
-				$theme = 'default';
-				// TODO temporary - clear the whole cache
-				MiCache::clear();
-				//MiCache::delete('Mi', 'paths', array('view', compact('plugin', 'theme')));
+				MiCache::config(array('path' => 'panel_data/'));
 			}
 		}
 		$this->Controller->layout = 'mi_panel';
